@@ -1,0 +1,47 @@
+Given an engineer have common attributes like communicate(), and can have specialized skills as well
+like doCoding(), fixCar(), makeRobot(). Make class diagram of engineer who can do both coding
+and make a robot.
+Solve it with appropriate design pattern in java.
+
+
+Solution:
+To model an Engineer with common behaviors like communicate() and varying specialized skills
+like doCoding(), fixCar(), makeRobot(), the best-fit design pattern is the Strategy Pattern.
+
+Why Strategy Pattern?
+It allows selecting algorithms (behaviors) at runtime.
+Encapsulates varying behaviors into separate classes.
+Keeps the Engineer class flexible and extensible.
+
+Engineer has common behavior: communicate()
+Engineer can have multiple skills
+Use a design pattern (we'll adapt the Strategy pattern with composition)
+
+          +-----------------------+
+          |   Engineer            |
+          +-----------------------+
+          | - skills: List<Skill> |
+          +-----------------------+
+          | +communicate()        |
+          | +doWork()             |
+          | +addSkill()           |
+          +-----------------------+
+                  |
+                  V
+        +-------------------+
+        |      Skill        |<---------------------------+
+        +-------------------+                            |
+        | +performSkill()   |                            |
+        +-------------------+                            |
+             ^           ^          ^                    |
+             |           |          |                    |
+ +----------------+ +------------------+ +-------------------+
+ |   CodingSkill  | |  CarRepairSkill  | |  RobotMakingSkill |
+ +----------------+ +------------------+ +-------------------+
+
+
+Advantages:
+Supports multiple specialized skills
+Easy to add or remove skills dynamically (addSkill(), removeSkill())
+Keeps code modular and maintainable
+

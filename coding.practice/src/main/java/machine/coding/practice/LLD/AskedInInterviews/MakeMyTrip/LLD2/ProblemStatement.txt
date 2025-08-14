@@ -1,0 +1,41 @@
+Design classes where you need to expose one api to client, to search food items from list of
+restaurants(Let’s say 3 restaurants). Each restaurant will expose you getMenu() API, having
+different request and response structure. You need to return the client list of a searched item
+from all 3 restaurants.
+Solve it using appropriate design pattern in java.
+
+
+Solution:
+To solve this, you need to unify multiple APIs with different interfaces into a single API
+for the client to search food items across different restaurants.
+
+Best Design Pattern: Adapter Pattern
+Why?
+Each restaurant has its own getMenu() method with different request/response formats.
+You want to expose one consistent interface to the client.
+Adapter Pattern allows you to wrap incompatible interfaces and expose a standard interface.
+
+
+
+
+
+                          +----------------------+
+                          |     MenuSearcher     |  <-- Facade or main API for client
+                          +----------------------+
+                          | +search(String):List |
+                          +----------------------+
+                                    |
+         -----------------------------------------------------
+         |                       |                        |
++----------------+     +-------------------+     +--------------------+
+| RestaurantAAdapter |  | RestaurantBAdapter |     | RestaurantCAdapter  |
++----------------+     +-------------------+     +--------------------+
+| +getMenu():List |     | +getMenu():List   |     | +getMenu():List     |
++----------------+     +-------------------+     +--------------------+
+         ^                        ^                         ^
+         |                        |                         |
++----------------+     +-------------------+     +--------------------+
+| RestaurantAAPI |     | RestaurantBAPI    |     | RestaurantCAPI     |
++----------------+     +-------------------+     +--------------------+
+| +getMenuA()     |     | +getMenuB()       |     | +getMenuC()         |
++----------------+     +-------------------+     +--------------------+
