@@ -1,8 +1,0 @@
-package machine.coding.practice.java.OOPS.SOLIDPrinciples.OpenClosedPrinciple;
-
-public class FileInvoiceDao implements InvoiceDao {
-    @Override
-    public void save(Invoice invoice) {
-
-    }
-}
