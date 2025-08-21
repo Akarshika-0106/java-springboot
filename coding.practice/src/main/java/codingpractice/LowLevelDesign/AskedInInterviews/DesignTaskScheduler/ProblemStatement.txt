@@ -1,0 +1,22 @@
+Design and implement a simple in-memory Task Scheduler in Java (low level design).
+# Functional Requirements You need to implement a scheduler that allows you to:
+1. Add a task with a delay in seconds.
+2. Cancel a scheduled task using its ID.
+3. Automatically execute the task after the specified delay using a background worker.
+
+# Interface Definition You should implement the following methods:
+- addTask(String taskId, int delayInSeconds, Runnable callback):
+  Adds a task to be executed after delayInSeconds seconds.
+- cancelTask(String taskId):
+  Cancels the task with the given ID so it will not be executed if still pending.
+
+# Background Execution - A worker thread should run in the background
+  and execute tasks after their scheduled delay.
+- Tasks must be executed in the order of their scheduled time.
+- The system must be thread-safe.
+
+# Sample Scenario
+1. Add task1 with 5 seconds delay.
+2. Add task2 with 2 seconds delay.
+3. Cancel task1 after 1 second.
+Expected: Only task2 should execute
