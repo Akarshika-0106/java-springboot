@@ -1,0 +1,1 @@
+Resilience4j by default applies token bucket algorithm
