@@ -1,4 +1,4 @@
-package codingpractice.Multithreading.ProducerConsumerProblem;
+package codingpractice.Multithreading.ProducerConsumerProblem.ImplementationUsingSynchronized;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,4 +1,4 @@
-package codingpractice.Multithreading.ProducerConsumerProblem;
+package codingpractice.Multithreading.ProducerConsumerProblem.ImplementationUsingSynchronized;
 
 public class Main {
 
