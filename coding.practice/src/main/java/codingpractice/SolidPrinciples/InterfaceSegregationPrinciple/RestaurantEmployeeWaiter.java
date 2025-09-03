@@ -1,4 +1,4 @@
-package codingpractice.SolidPrinciples.InterfaceSegmentedPrinciple;
+package codingpractice.SolidPrinciples.InterfaceSegregationPrinciple;
 
 public interface RestaurantEmployeeWaiter {
     public void takeOrder();

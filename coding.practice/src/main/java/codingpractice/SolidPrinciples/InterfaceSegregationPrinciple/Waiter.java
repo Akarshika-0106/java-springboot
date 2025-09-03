@@ -1,4 +1,4 @@
-package codingpractice.SolidPrinciples.InterfaceSegmentedPrinciple;
+package codingpractice.SolidPrinciples.InterfaceSegregationPrinciple;
 
 public class Waiter implements RestaurantEmployeeWaiter {
     @Override
