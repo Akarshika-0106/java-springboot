@@ -1,4 +1,4 @@
-package codingpractice.DSAProblems.Problem1;
+package codingpractice.DSAProblems;
 
 import java.util.Arrays;
 
@@ -43,3 +43,22 @@ public class AggressiveCows {
         return false;
     }
 }
+
+
+//Aggressive Cows
+//
+//Given an array stalls[] representing the positions of stalls and an integer k denoting the number of aggressive cows,
+//place the cows in the stalls such that the minimum distance between any two cows is as large as possible.
+//Return this maximum possible minimum distance.
+//
+//Examples:
+//
+//Input: stalls[] = [1, 2, 4, 8, 9], k = 3
+//Output: 3
+//Explanation: We can place cow 1 at position 1, cow 2 at position 4 and cow 3 at position 9.
+//So, the maximum possible minimum distance between two cows is 3.
+//
+//Input: stalls[] = [6, 7,  9, 11, 13, 15], k = 4
+//Output: 2
+//Explanation: We can place cow 1 at position 6, cow 2 at position 9, cow 3 at position 11 and cow 4 at position 15.
+//So, the maximum possible minimum distance between two cows is 2.

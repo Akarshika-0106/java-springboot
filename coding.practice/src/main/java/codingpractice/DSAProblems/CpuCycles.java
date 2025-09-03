@@ -1,4 +1,4 @@
-package codingpractice.DSAProblems.Problem3;
+package codingpractice.DSAProblems;
 
 import java.util.*;
 
@@ -49,3 +49,19 @@ public class CpuCycles {
         return count;
     }
 }
+
+
+//Given array of process type, array of process memory, and maxMemory.
+//One CPU cycle can process at most 2 processes if the sum of two processes is less than equal to the maxMemory.
+//Otherwise, the process should be executed in a separate CPU cycle.
+//Return the minimum number of CPU cycles required to execute all processes.
+//
+//
+//processes = [
+//        [0, 2], [0, 4], [0, 5], [0, 6],  	# Type 0
+//        [1, 3], [1, 3], [1, 8],          	# Type 1
+//        [2, 2], [2, 7],                  	# Type 2
+//        [3, 9], [3, 1], [3, 5]            # Type 3]
+//maxMemory = 9
+//
+//Output : 7
