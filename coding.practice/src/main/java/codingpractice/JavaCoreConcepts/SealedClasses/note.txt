@@ -1,0 +1,4 @@
+In java inheritance, its not possible to control the hierarchy, any class can join it by implementing the
+interface or by extending the class, even we did not plan for it.
+So to bring the control, like who can extend a class or implement an interface?
+We can achieve it through sealed classes/interfaces in java (java 17)

@@ -14,6 +14,6 @@ public class FilterTransform {
                 .sorted(Comparator.comparingInt(String::length))
                 .toList();
 
-        System.out.println(result);
+        System.out.println("Unique words sorted by length: " + result);
     }
 }
